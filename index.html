@@ -1,0 +1,24 @@
+// Order the productsArray based on descending popularity
+const sortedProducts = productsArray.sort((a, b) => b.popularity - a.popularity);
+<!-- Assuming you are creating a simple HTML page to display the data -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display</title>
+</head>
+<body>
+  <h1>Product Display</h1>
+  <ul>
+    <!-- Display each product in the sorted order -->
+    {{#each sortedProducts}}
+      <li>
+        <strong>Title:</strong> {{title}}, 
+        <strong>Price:</strong> {{price}}, 
+        <strong>Popularity:</strong> {{popularity}}
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>
